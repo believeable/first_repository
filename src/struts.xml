@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+ 
+    <package name="default" namespace="/" extends="struts-default">
+			<action name="queryPersons" method="queryPersons" class="test2.servlet.UserAction">
+			<result name="success">/persons.jsp</result>
+			</action>
+			<action name="addPerson" method="addPerson" class="test2.servlet.UserAction">
+			<result name="success" type="redirectAction">queryPersons</result>
+			</action>
+			<action name="deletePersonById" method="deletePersonById" class="test2.servlet.UserAction">
+			<result name="success" type="redirectAction">queryPersons</result>
+			</action>
+			<action name="updatePerson" method="updatePerson" class="test2.servlet.UserAction">
+			<result name="success" type="redirectAction">queryPersons</result>
+			</action>
+			<action name="updatePrepared" method="updatePrepared" class="test2.servlet.UserAction">
+			<result>/update.jsp</result>
+			</action>
+			
+    </package>
+
+
+</struts>
