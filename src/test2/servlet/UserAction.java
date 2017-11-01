@@ -22,7 +22,7 @@ public class UserAction extends ActionSupport{
 	public String queryPersons(){//查询所有人
 		List<PersonBean> persons = service.queryPersons();			
 		ServletActionContext.getRequest().setAttribute("persons", persons);
-		
+		System.out.println(".................");
 		return SUCCESS;
 	}
 	public String deletePersonById(){//删除
